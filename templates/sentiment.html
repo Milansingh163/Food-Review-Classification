@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sentiment Analysis</title>
+</head>
+<body>
+    <h1>Sentiment Analysis</h1>
+    <form method="POST">
+        <label for="review">Customer Review:</label>
+        <input type="text" id="review" name="review" required><br><br>
+        
+        <input type="submit" value="Predict Sentiment">
+    </form>
+    
+    {% if review %}
+        <h2>Review:</h2>
+        <p>{{ review }}</p>
+        
+        {% if sentiment %}
+            <h2>Sentiment:</h2>
+            <p>{{ sentiment }}</p>
+        {% endif %}
+    {% endif %}
+    
+    <br>
+    <a href="/">Go to Question Form</a>
+</body>
+</html>
